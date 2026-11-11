@@ -1,0 +1,14 @@
+☣ VOIDSTING v1.2.4 // EVEN SCROLL
+
+58 offline unittest checks passed (55 retained + 3 new Even Scroll regression checks).
+Simulated Chromium UI checks with no live network: viewport widths 1540, 1280, 1100 and 390.
+- At desktop widths 1540 and 1280: center and right grid columns finish at the same bottom edge (within 3 px).
+- Saved Traces expands from a cramped list to fill the right side, distributing existing saved cards without creating fake data.
+- ALL and EXACT filters continue to operate.
+- 25 manual reference links remain NOT CHECKED.
+- No JS page errors and no horizontal overflow.
+- Tablet and phone stacked layouts preserved.
+- ZIP verified and launcher source list checked.
+
+All preview data is simulated. User's live VOIDSTING and BLACKSWARM vaults were not accessed or modified.
+Previous v1.2.3 package is unchanged.

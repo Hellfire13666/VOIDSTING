@@ -1,0 +1,6 @@
+☣ VOIDSTING v1.2.3 // VOIDPULSE
+- Large center session visualization from existing saved evidence only.
+- Interactive colored nodes and category buttons filter the existing Evidence Explorer.
+- Selected username, scan mode, session number/timestamp, signal distribution, exact/related/unresolved counts read from selected session.
+- No network calls initiated from VOIDPULSE, no changes to source providers, no automatic browser, no SQL writes.
+- Former balanced layout, 10 terminal options, 16 verifiers, reference atlas, left control core, and BLACKSWARM remain intact.

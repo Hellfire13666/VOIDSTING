@@ -1,0 +1,13 @@
+☣ VOIDSTING v1.2.1 // BALANCED RAINBOW VENOM
+
+Center (top to bottom): Signal Constellation, Evidence Explorer, Rainbow Timeline, Public Reference Atlas (NOT CHECKED).
+Right (top to bottom): Venom Signal Tower, Provider Matrix, Source Guard, Saved Traces.
+
+All elements reused from the approved v1.2.0 build. No new search code, APIs, write actions, or menu options.
+All 25 manual references remain NOT CHECKED and do not count as evidence.
+Separate build directory, unaffected original ZIP and BLACKSWARM.
+
+UI scroll results may differ depending on selected session and viewport.
+
+
+VENOM CONTROL CORE v1.2.2: left rail radar, real saved-session counts, latest session, three anchor shortcuts. No new scans.

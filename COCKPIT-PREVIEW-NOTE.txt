@@ -1,0 +1,3 @@
+Preview images show a simulated saved-session view, NOT live account results.
+EVEN-SCROLL-BOTTOM-PREVIEW.png illustrates matching center/right bottom edges in v1.2.4.
+The legacy COCKPIT-PREVIEW-SIMULATED.png is the prior VOIDPULSE illustration.

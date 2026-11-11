@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="dark" name="color-scheme"/>
+<title>VOIDSTING // VOIDPULSE Cockpit</title>
+<link href="/assets/style.css" rel="stylesheet"/>
+<script defer="" src="/assets/app.js"></script>
+</head>
+<body class="rainbow-venom">
+<div aria-hidden="true" class="rainbow-beam"></div>
+<div class="shell">
+<aside aria-label="Cockpit navigation" class="rail">
+<div class="brand">
+<div aria-hidden="true" class="brand-crest">
+<svg fill="none" viewbox="0 0 72 72" xmlns="http://www.w3.org/2000/svg"><path d="M36 55V27M28 20l8 7 8-7M21 34l15 12 15-12M20 51l16 9 16-9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path><path d="M19 27C6 17 16 6 29 12M53 27C66 17 56 6 43 12M28 56l8-4 8 4" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path><path d="M29 11l7-6 7 6M36 60l-5 8" stroke="currentColor" stroke-width="2"></path></svg>
+</div>
+<div><strong>VOIDSTING</strong><span>GLITCHBYTE PHANTOM LABS</span></div>
+</div>
+<div class="rail-status"><span class="led"></span> LOCAL RESEARCH NETWORK <span class="rail-dot">◈</span></div>
+<p class="nav-label">THE OBSERVATORY</p>
+<nav class="nav-list"><a class="nav active" href="#overview"><span>◉</span> SIGNAL OVERVIEW</a><a class="nav" href="#constellation"><span>✧</span> SIGNAL CONSTELLATION</a><a class="nav" href="#evidence"><span>⌕</span> EVIDENCE EXPLORER</a><a class="nav" href="#source-guard"><span>⬡</span> SOURCE GUARD</a><a class="nav" href="#traces"><span>▤</span> SESSION VAULT</a></nav>
+<!-- VENOM CONTROL CORE: read-only, selected-session data; no automatic scans -->
+<section aria-label="Venom Control Core, saved research only" class="venom-control-core" id="control-core">
+ <div class="core-heading"><span>◈ VENOM CONTROL CORE</span><span class="core-status-light" title="Local vault data only"></span></div>
+ <div class="core-radar-wrap">
+  <div aria-hidden="true" class="side-creature"><div class="creature-ring r1"></div><div class="creature-ring r2"></div><div class="creature-ring r3"></div><div class="stinger">☣</div><span class="creature-label">STING RADAR</span></div>
+  <div class="core-radar-status"><b id="coreStatus">AWAITING VAULT</b><small>Saved evidence · no live scan</small></div>
+ </div>
+ <div class="core-session" aria-live="polite"><small>◉ SELECTED RESEARCH HANDLE</small><strong id="coreHandle">No session selected</strong><span id="coreMode">Choose a saved trace</span></div>
+ <div class="core-counts" aria-label="Selected session evidence counts"><div class="core-count exact"><b id="coreExact">0</b><small>EXACT</small></div><div class="core-count related"><b id="coreRelated">0</b><small>RELATED</small></div><div class="core-count uncertain"><b id="coreUnresolved">0</b><small>UNRESOLVED</small></div></div>
+ <div class="core-latest"><small>◷ LATEST SAVED SIGNAL</small><span id="coreLatest">No saved sessions</span></div>
+ <div class="core-shortcuts" aria-label="Quick access to Cockpit sections"><a href="#traces" title="Open saved session history">▤ <span>History</span></a><a href="#evidence" title="Open evidence explorer">⌕ <span>Evidence</span></a><a href="#source-guard" title="Open source rules and statuses">⬡ <span>Sources</span></a></div>
+ <p class="core-footnote">LOCAL VAULT · READ-ONLY · NO AUTO SEARCH</p>
+</section>
+<div class="rail-notice">◈ <b>OPERATIONAL SEAL</b><p>Evidence is read-only. Searches run in your terminal. No automatic browser actions.</p></div>
+<div class="rail-footer">VOIDSTING <b>v1.4.0</b><br/>INDEPENDENT OF BLACKSWARM<br/><span>LOCAL VAULT · PRIVATE RESEARCH</span></div>
+</aside>
+<main class="main" id="overview">
+<div aria-hidden="true" class="grid-noise"></div>
+<div class="topbar"><div class="crumb">☣   PHANTOM LABS / RESEARCH / <strong>VOIDSTING</strong></div><div class="topright"><span class="tiny-light"></span> <span>VAULT LINK ACTIVE</span> <span class="top-separator">/</span> <span id="topClock">LOCAL SESSION</span></div></div>
+<header class="hero">
+<div class="hero-copy"><p class="eyebrow">✦ PUBLIC PROFILE SIGNAL INTELLIGENCE</p><h1>RAINBOW <em>VENOM</em> <span>COCKPIT</span></h1><p>Trace the handle. Separate the signal from the noise. Every color has a meaning.</p><div class="hero-tags"><span>◉ TERMINAL-FIRST</span><span>◇ VERIFIED HANDLE ≠ IDENTITY</span><span>✧ EVIDENCE-LED</span></div></div>
+<div aria-hidden="true" class="hero-emblem"><div class="hero-halo h1"></div><div class="hero-halo h2"></div><div class="hero-halo h3"></div><div class="hero-rune">V<span>✦</span></div><div class="hero-nucleus"></div></div>
+</header>
+<section aria-label="Selected session statistics" class="metrics">
+<article class="metric m-total"><div class="metric-top"><span>◈ STORED SESSIONS</span><small>01 / VAULT</small></div><strong id="countSessions">0</strong><div class="meter"><i></i></div><p>latest 40 sessions</p></article>
+<article class="metric m-exact"><div class="metric-top"><span>◉ EXACT SIGNALS</span><small>02 / VERIFIED</small></div><strong id="countExact">0</strong><div class="meter"><i></i></div><p>matching public API handles</p></article>
+<article class="metric m-related"><div class="metric-top"><span>⌁ RELATED TRAILS</span><small>03 / REVIEW</small></div><strong id="countRelated">0</strong><div class="meter"><i></i></div><p>suggestions, not identity links</p></article>
+<article class="metric m-uncertain"><div class="metric-top"><span>⚠ UNRESOLVED</span><small>04 / CAUTION</small></div><strong id="countUnknown">0</strong><div class="meter"><i></i></div><p>uncertain, blocked or errors</p></article>
+</section>
+<section class="workgrid">
+<div class="primary">
+<section class="panel constellation-panel voidpulse-panel" id="constellation" aria-labelledby="voidpulseTitle">
+ <div class="panel-title"><div><span class="panel-kicker">◈ SAVED SESSION SIGNAL CORE · NO LIVE NETWORK CALLS</span><h2 id="voidpulseTitle">VOIDPULSE <span class="pulse-spark">✦</span></h2></div><span class="panel-tag">INTERACTIVE VAULT PROJECTION</span></div>
+ <div class="voidpulse-topline">
+  <div class="voidpulse-identity"><small>RESEARCH HANDLE // SELECTED TRACE</small><b id="vpHandle">AWAITING SESSION</b><span id="vpSession">Select a saved trace from the right</span></div>
+  <div class="voidpulse-mode"><small>SAVED MODE</small><strong id="vpMode">NO SESSION</strong><span>READ-ONLY · LOCAL SQLITE</span></div>
+ </div>
+ <div class="voidpulse-stage">
+  <div class="voidpulse-visual">
+   <div class="voidpulse-ambient" aria-hidden="true"></div>
+   <svg aria-label="Selected session interactive signal constellation, each node is a saved result" id="signalMap" role="img" viewBox="0 0 640 340"></svg>
+   <div class="voidpulse-canvas-footer"><span><i class="pulse-light"></i> SAVED SIGNAL PROJECTION</span><span id="vpFocus">SELECT NODE OR LENS TO FILTER</span></div>
+  </div>
+  <div class="voidpulse-readout">
+   <div class="pulse-orbit-mark" aria-hidden="true">◈ <span>VOID</span>PULSE</div>
+   <div class="side-big"><small>SELECTED PROFILE</small><b id="mapHandle">NO SESSION</b><span id="mapMode">AWAITING VAULT</span></div>
+   <div class="pulse-pair"><div class="side-stat"><span>RECORDED SIGNALS</span><b id="mapTotal">0</b></div><div class="side-stat"><span>PROFILE LINKS</span><b id="mapLinks">0</b></div></div>
+   <div class="pulse-time"><small>SESSION TIMESTAMP</small><span id="vpTimestamp">NOT SELECTED</span></div>
+   <p>Each node is a saved source result, <strong>not</strong> a relationship between people. Click a node to filter the Evidence Explorer.</p>
+  </div>
+ </div>
+ <div class="voidpulse-spectrum"><div class="voidpulse-spectrum-title"><b>SIGNAL SPECTRUM</b><span>FROM SAVED EVIDENCE · CLICK A LENS</span></div>
+  <div class="voidpulse-meter" aria-label="Recorded evidence distribution"><span id="vpBarExact" class="vp-bar-exact" title="Exact account identifier"></span><span id="vpBarRelated" class="vp-bar-related" title="Related directory handles"></span><span id="vpBarUncertain" class="vp-bar-uncertain" title="Uncertain results"></span><span id="vpBarOther" class="vp-bar-other" title="Other source outcomes"></span></div>
+  <div class="voidpulse-lenses" aria-label="Filter saved evidence by signal classification">
+   <button type="button" data-filter="ALL" class="voidpulse-lens"><b id="vpAll">0</b><span>ALL SIGNALS</span></button>
+   <button type="button" data-filter="EXACT" class="voidpulse-lens exact"><b id="vpExact">0</b><span>EXACT</span></button>
+   <button type="button" data-filter="RELATED" class="voidpulse-lens related"><b id="vpRelated">0</b><span>RELATED</span></button>
+   <button type="button" data-filter="UNCERTAIN" class="voidpulse-lens uncertain"><b id="vpUncertain">0</b><span>UNCERTAIN</span></button>
+   <button type="button" data-filter="OTHER" class="voidpulse-lens other"><b id="vpOther">0</b><span>OTHER</span></button>
+  </div>
+  <div class="voidpulse-bottom"><span>◉ LAST SAVED SIGNAL: <strong id="vpLatest">NO SESSIONS</strong></span><a href="#evidence">OPEN EVIDENCE EXPLORER ⌕</a></div>
+ </div>
+</section>
+<section class="panel evidence-panel" id="evidence"><div class="panel-title"><div><span class="panel-kicker">⌕ SOURCE-BY-SOURCE ACCOUNTING</span><h2>EVIDENCE EXPLORER</h2></div><span class="panel-tag">READ ONLY</span></div>
+<div class="query-strip"><div><small>RESEARCH HANDLE</small><strong id="currentUser">No session selected</strong></div><span class="query-mode" id="currentMode">LOCAL</span></div>
+<div aria-label="Evidence filter" class="filter-line"><div class="filters"><button class="selected" data-filter="ALL" type="button">ALL</button><button data-filter="EXACT" type="button">EXACT</button><button data-filter="RELATED" type="button">RELATED</button><button data-filter="UNCERTAIN" type="button">UNCERTAIN</button><button data-filter="OTHER" type="button">OTHER</button></div><label class="search-field"><span>⌕</span><input aria-label="Filter saved evidence text" autocomplete="off" id="evidenceFind" placeholder="Filter provider or evidence" type="search"/></label></div>
+<div class="evidence-count" id="resultCount">Open a saved session to view evidence.</div>
+<div aria-live="polite" class="results" id="resultList"><p class="empty">No session selected yet.</p></div>
+</section>
+<section class="panel timeline-panel" id="timeline"><div class="panel-title"><div><span class="panel-kicker">◉ HISTORY PROJECTION</span><h2>RAINBOW SIGNAL TIMELINE</h2></div><span class="panel-tag">LOCAL SESSIONS</span></div><p class="panel-description">Select a trace to reopen its saved evidence. No new scan is started.</p><div class="timeline-track" id="timelineTrack"><p class="empty">Saved traces appear here.</p></div></section><section class="panel reference-panel" id="references"><div class="panel-title"><div><span class="panel-kicker">⌁ OPTION [8] / MANUAL VIEW</span><h2>PUBLIC REFERENCE ATLAS</h2></div><span class="panel-tag not-checked">NOT CHECKED</span></div>
+<div class="reference-message"><b id="referenceLabel">SELECT A SESSION</b><p>Generated destinations are <strong>not scans, findings, or evidence</strong>. Links open only when you click them.</p></div>
+<div class="reference-list" id="referenceList"><p class="empty">Choose a saved session to populate public reference links.</p></div>
+<div class="reference-footer" id="referenceCount">0 reference templates · 0 verified by this view</div>
+</section></div>
+<aside class="secondary">
+<section class="panel tower-panel"><div class="panel-title"><div><span class="panel-kicker">☣ VOID REACTOR</span><h2>VENOM SIGNAL TOWER</h2></div><span class="panel-tag">PRIVATE</span></div>
+<div class="radar"><div class="radar-grid"></div><div class="radar-ring ring1"></div><div class="radar-ring ring2"></div><div class="radar-ring ring3"></div><div class="radar-sweep"></div><div class="radar-center">V<span>✦</span></div><div class="radar-beacon one"></div><div class="radar-beacon two"></div><div class="radar-beacon three"></div><span class="radar-nw">NORTH // 01</span><span class="radar-se">SIGNAL LOCK</span></div>
+<div class="tower-readouts"><div><span>API IDENTIFIER</span><b>EXACT CHECK</b></div><div><span>RELATED HANDLES</span><b>REVIEW ONLY</b></div><div><span>SCANS / NEW ACTIVITY</span><b>TERMINAL</b></div><div><span>STORAGE</span><b>LOCAL SQLITE</b></div></div>
+<div class="terminal-card"><small>RUN NEW SCANS IN YOUR TERMINAL</small><strong>VOIDSTING ❯ <span>2</span></strong><p>Full Verify uses 20 bounded public API checks. Quick Verify stays at 6. The Cockpit never starts searches.</p></div>
+</section>
+<section class="panel sources-panel"><div class="panel-title"><div><span class="panel-kicker">▣ CURRENT SESSION</span><h2>PROVIDER MATRIX</h2></div><span class="panel-tag" id="sourceCount">0 SOURCES</span></div><div aria-label="Saved session source status" class="pulse-strip" id="pulseStrip"><span>Select a session for provider pulse.</span></div><div class="source-matrix" id="sourceMatrix"><p class="empty">Provider statuses appear after selecting a session.</p></div></section><section class="panel truth-panel" id="source-guard"><div class="panel-title"><div><span class="panel-kicker">⬡ EVIDENCE RULES</span><h2>SOURCE GUARD</h2></div><span class="panel-tag">NO INFERRED OWNERSHIP</span></div><div class="truth-grid"><article><i class="dot exact"></i><b>EXACT</b><p>A public API returned a matching username identifier. Not verified identity.</p></article><article><i class="dot related"></i><b>RELATED</b><p>Public directory suggestion. No assumption about ownership.</p></article><article><i class="dot uncertain"></i><b>UNCERTAIN</b><p>Redirect, inaccessible response, or insufficient evidence.</p></article><article><i class="dot other"></i><b>NOT FOUND / BLOCKED</b><p>Source-specific result or restriction. Never global absence.</p></article></div></section>
+<section class="panel session-panel" id="traces"><div class="panel-title"><div><span class="panel-kicker">▤ LOCAL ARCHIVE</span><h2>SAVED TRACES</h2></div><span class="panel-tag">NEWEST FIRST</span></div><div class="sessions" id="sessions"><p class="empty">No sessions yet.</p></div></section>
+</aside>
+</section>
+<footer><span>☣ VOIDSTING v1.4.0 // GLITCHBYTE PHANTOM LABS</span><span>PUBLIC HANDLES ≠ SHARED IDENTITY · LOCAL READ-ONLY COCKPIT · BLACKSWARM UNTOUCHED</span></footer>
+</main>
+</div>
+</body>
+</html>

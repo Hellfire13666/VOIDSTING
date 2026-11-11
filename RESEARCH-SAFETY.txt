@@ -1,0 +1,12 @@
+VOIDSTING // RESEARCH SEAL
+- For appropriate public, non-invasive username research only.
+- No authentication, account takeover, private crawling, or bypasses.
+- Fixed endpoints. The operator cannot supply arbitrary target hosts.
+- One username per run; no unattended batch scans or schedulers.
+- Handles used by different accounts are NOT proof of a shared owner.
+- An absent result means only that a specific provider did not confirm it.
+- Explicitly distinguish EXACT vs RELATED vs UNCERTAIN / BLOCKED.
+- Database: ~/.local/share/voidsting/voidsting.sqlite3 (independent).
+- BLACKSWARM: not accessed, not modified, not imported.
+
+The v1.2.2 Cockpit constellation is a visualization of stored evidence only, not a map of identities or relationships. Full Verify uses 16 bounded public account lookups.
