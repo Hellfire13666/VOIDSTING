@@ -1,5 +1,3 @@
-<p align="center"><img src="docs/assets/voidsting-icon.png" alt="VOIDSTING neon scorpion icon" width="175" /></p>
-
 ![VOIDSTING neon scorpion release artwork](docs/assets/voidsting-hero.webp)
 
 # ☣ VOIDSTING // VOIDPULSE COCKPIT
@@ -10,10 +8,6 @@
 VOIDSTING is independent public-username research software. It is a separate sister to [BLACKSWARM](https://github.com/Hellfire13666/BLACKSWARM-SKULL-SWARM). Both have local visual Cockpits, but **they do not share a database, installation, or backend**.
 
 ## VOIDPULSE Launch Viewer
-
-<p align="center">
-  <img src="docs/assets/voidsting-icon.png" alt="VOIDSTING neon scorpion" width="105" />
-</p>
 
 **🦂 START · VERIFY · EXPLORE · SAVE**
 
@@ -78,8 +72,6 @@ This installs the optional dependency in VOIDSTING's private environment only. Y
 The optional Maigret integration uses third-party **Maigret 0.6.6**, licensed MIT: <https://github.com/soxoj/maigret>. It is not bundled in the repository. Public sites may have rate limits or bot protections; candidates need independent review, and matching handles do not establish a shared identity.
 
 ## The local Cockpit
-
-![Simulated VOIDSTING Cockpit preview; no live account findings](docs/assets/voidsting-cockpit.png)
 
 The **VOIDPULSE** Cockpit shows saved public username evidence, sessions, status labels, and a constellation of findings. Its data remains local and private. The website hosted through GitHub Pages is a **static showcase only**. It cannot run username searches.
 
