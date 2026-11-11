@@ -47,12 +47,10 @@ One handle is checked at a time. No credential capture, private-profile access, 
 
 All saved sessions go to a **local SQLite vault**, never the public Pages site. Do not commit `.wide-venv`, `~/.local/share/voidsting/`, exported evidence, or private configuration. The `.gitignore` excludes common local research and credential formats. Manually review all files before first publication.
 
-## Further documentation
+## Project guide
 
-- [Engine and release notes](README-ENGINE-NOTES.md)
-- [Wide search setup](WIDE-SEARCH-READ-ME-FIRST.md)
-- [Evidence Guard](EVIDENCE-GUARD-RELEASE-NOTES.md)
-- [Reliability notes](WIDE-RELIABILITY-RELEASE-NOTES.md)
-- [Research safety](RESEARCH-SAFETY.txt)
+The commands above cover quick scans, full verification, the optional 120-site sweep, and the locally hosted VOIDPULSE Cockpit. The [GlitchByte home page](docs/index.html) showcases the interface; source code, automated tests, and setup scripts remain in this repository.
+
+Review public-profile candidates individually. A username match is not evidence that accounts share an owner, and inaccessible sites are not proof of absence.
 
 © GlitchByte Phantom Labs. No new software license is granted merely by publishing these files. Any reuse or licensing decision belongs to the repository owner.
